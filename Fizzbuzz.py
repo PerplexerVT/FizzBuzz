@@ -15,20 +15,16 @@ import sys
 #
 
 def fizzBuzz(n):
-    a = 1;
-    while n >= a:
-        flag = False
-        output = str(a)
-        if a % 3 == 0:
-            flag = True
-            output = "Fizz"
-        if a % 5 == 0:
-            if flag == True:
-                output += "Buzz"
-            else:
-                output = "Buzz"
+    for i in range(1, n+1):
+        output = ""
+        if i % 3 == 0:
+            output += "Fizz"
+        if i % 5 == 0:
+            output += "Buzz"
+        if len(output) == 0:
+            output = i
         print(output)
-        a+=1
+        n = n + 1
 
 if __name__ == '__main__':
     n = int(input().strip())
